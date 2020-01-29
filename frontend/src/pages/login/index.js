@@ -10,7 +10,7 @@ export default function Login({ history }) {
     const {
       data: { _id }
     } = await api.post("/sessions", { email });
-    localStorage.setItem("user", _id);
+    localStorage.setItem("userId", _id);
 
     history.push("/dashboard");
   }
